@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Eda için özel hazırlanmış beyaz gül deneyimi — saflık, masumiyet ve yeni başlangıçların zarif simgesi." />
+  <title>Beyaz Gül · Eda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- AUDIO -->
+  <audio id="bg-audio" src="ssstik.io_1783192375298.mp3" preload="auto" loop playsinline></audio>
+
+  <!-- AUDIO CONTROL -->
+  <div id="audio-btn" aria-label="Sesi ac/kapat">
+    <div class="audio-icon">
+      <span class="bar b1"></span>
+      <span class="bar b2"></span>
+      <span class="bar b3"></span>
+      <span class="bar b4"></span>
+    </div>
+  </div>
+
+  <!-- SECTION 1: OPENING — siyah ekran + partiküller -->
+  <section id="s-opening" class="section full-screen">
+    <canvas id="c-particles"></canvas>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator">
+      <span class="scroll-label">aşağı kaydır</span>
+      <div class="scroll-arrow">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 7L10 13L16 7" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: TEXT REVEAL -->
+  <section id="s-text" class="section full-screen">
+    <div class="text-stage" id="text-stage">
+      <p class="cinematic-text" id="ct-1">Sevgili Eda...</p>
+      <p class="cinematic-text" id="ct-2">Bazı hediyeler sadece güzel olduğu için alınır..</p>
+      <p class="cinematic-text" id="ct-3">Bu onlardan biri değil</p>
+      <div class="meaning-words" id="meaning-words">
+        <span class="meaning-word" id="mw-1">Sana baktığımda</span>
+        <span class="meaning-word" id="mw-2">Hissetiğim huzuru.</span>
+        <span class="meaning-word" id="mw-3">Ve bir çok güzel duyguyu</span>
+        <span class="meaning-word" id="mw-4">Anlatabilmemin en zarif halidir.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Eda NAME BUILD -->
+  <section id="s-Eda" class="section full-screen">
+    <div class="Eda-container">
+      <h1 class="Eda-name" id="Eda-name" aria-label="Eda"></h1>
+      <div class="Eda-message" id="Eda-message">
+        <p class="rm-line" id="rm-l1">Ah Eda'm üzümlü kekim, minik şekerim</p>
+        <p class="rm-line" id="rm-l2">Sana dair iyi ki dediğim çok şey var ve bugün.</p>
+        <p class="rm-line" id="rm-l3">Bunlardan en önemlisi.</p>
+        <p class="rm-line" id="rm-l4">İyiki benim hayatımdasın</p>
+        <p class="rm-line" id="rm-l5">"Her yeni yaşında hep yanı başında olacağıma söz veriyorum"</p>
+        <p class="rm-line" id="rm-l6">Hep benimle ol hep beni sev hep seni çok seveyim.</p>
+        <p class="rm-line" id="rm-l7">Seni çok seviyorum iyi ki varsın canım...</p>
+        <p class="rm-line rm-birthday" id="rm-l8">iyiki doğdun Edoşumm.</p>
+      </div>
+    </div>
+    <canvas id="c-petals"></canvas>
+  </section>
+
+  <!-- SECTION 4: NIGHT SKY FINALE -->
+  <section id="s-finale" class="section full-screen">
+    <canvas id="c-stars"></canvas>
+    <div class="finale-text" id="finale-text">
+      <p class="finale-quote" id="fq-1">Ve ben yine seni seçerdim yüz yaşamda yüz dünyada şartlar ne olursa hayat ne getirirse, yine seni seçerdim.</p>
+      <p class="finale-sub" id="fq-2">:).</p>
+    </div>
+  </section>
+
+  <!-- GLOBAL PARTICLES -->
+  <canvas id="c-global-particles" aria-hidden="true"></canvas>
+
+  <script src="audio.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
